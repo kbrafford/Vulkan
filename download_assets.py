@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
-
+from __future__ import print_function
 import sys
-from urllib.request import urlretrieve
+try:
+    from urllib.request import urlretrieve
+except:
+    from urllib import urlretrieve
+
 from zipfile import ZipFile
 
 ASSET_PACK_URL = 'http://vulkan.gpuinfo.org/downloads/vulkan_asset_pack.zip'
